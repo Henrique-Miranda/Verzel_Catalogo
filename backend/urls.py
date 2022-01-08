@@ -5,7 +5,7 @@ from api import views
 
 router = routers.DefaultRouter()
 router.register(r'lessons', views.LessonViewSet)
-router.register(r'groups', views.ModuleViewSet)
+router.register(r'modules', views.ModuleViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
