@@ -1,2 +1,2 @@
-# Verzel_Catalogo
-Verzel - Catalogo de Aulas
+# Verzel_Lesson_Catalog
+Verzel - Lesson Catalog
