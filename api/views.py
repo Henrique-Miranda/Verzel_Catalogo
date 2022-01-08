@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Lesson, Module
 from rest_framework import viewsets
 from rest_framework import permissions
-from rest_framework.authentication import TokenAuthentication
+from rest_framework.authentication import TokenAuthentication, SessionAuthentication
 from .serializers import LessonSerializer, ModuleSerializer
 
 # Reference https://www.devaria.com.br/conteudo-das-aulas
@@ -16,7 +16,7 @@ class LessonViewSet(viewsets.ModelViewSet):
     queryset = Lesson.objects.all().order_by('name')
     serializer_class = LessonSerializer
     permission_classes = [permissions.IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [TokenAuthentication, SessionAuthentication]
 
 class ModuleViewSet(viewsets.ModelViewSet):
     """
@@ -25,4 +25,4 @@ class ModuleViewSet(viewsets.ModelViewSet):
     queryset = Module.objects.all().order_by('name')
     serializer_class = ModuleSerializer
     permission_classes = [permissions.IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
+    authentication_classes = [TokenAuthentication, SessionAuthentication]
