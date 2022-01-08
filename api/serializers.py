@@ -9,6 +9,7 @@ class LessonSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ModuleSerializer(serializers.HyperlinkedModelSerializer):
+    lesson_set = LessonSerializer(many=True)
     class Meta:
         model = Module
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'lesson_set']
