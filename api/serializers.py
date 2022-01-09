@@ -5,7 +5,7 @@ from rest_framework import serializers
 class LessonSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Lesson
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'module', 'date']
 
 
 class ModuleSerializer(serializers.HyperlinkedModelSerializer):
