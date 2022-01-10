@@ -12,4 +12,4 @@ class ModuleSerializer(serializers.HyperlinkedModelSerializer):
     lesson_set = LessonSerializer(many=True)
     class Meta:
         model = Module
-        fields = ['id', 'name', 'lesson_set']
+        fields = ['id', 'name', 'total_lessons', 'lesson_set']
